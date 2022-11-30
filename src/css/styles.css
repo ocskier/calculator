@@ -4,6 +4,7 @@
 
 :root {
   --bg-color-1: rgba(216, 239, 251, 0.25);
+  --bg-color-2: rgba(61, 182, 248, 0.25);
 }
 
 html,
@@ -33,6 +34,17 @@ main {
   flex-basis: 25%;
   border-left: 1px solid rgba(251, 183, 183, 0.5);
   border-right: 1px solid rgba(251, 183, 183, 0.5);
+  transition: transform 0.2s;
+  transform: scale(1);
+}
+
+.calculator > section > div:hover {
+  background-color: var(--bg-color-2);
+}
+
+.calculator > section > div:active {
+  transform: scale(1.1);
+  transition: transform 0.2s;
 }
 
 .calculator span {
