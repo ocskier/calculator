@@ -18,7 +18,7 @@ isClickableEls.forEach((el) => {
   el.addEventListener("click", function () {
     const userInput = this.children[0].textContent;
     if (!isNum1Selected && !isNaN(Number(userInput))) {
-      calc.num1 += Number(userInput);
+      calc.num1 += userInput;
       return calc.num1;
     }
     if (!isOperatorSelected && /[+\-*\/]/g.test(userInput)) {
@@ -30,7 +30,7 @@ isClickableEls.forEach((el) => {
       }
     }
     if (isNum1Selected && isOperatorSelected && !isNaN(Number(userInput))) {
-      calc.num2 += Number(userInput);
+      calc.num2 += userInput;
       return calc.num2;
     }
     if (isNum1Selected && isOperatorSelected && /[=]/g.test(userInput)) {
