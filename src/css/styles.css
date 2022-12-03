@@ -75,6 +75,7 @@ main {
 
 .display {
   flex-basis: 25%;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-height: 780px) {
