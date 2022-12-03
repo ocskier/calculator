@@ -4,81 +4,116 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-        />
-        <link rel="stylesheet" href="./src/css/styles.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <main class="is-flex is-flex-direction-column m-6 calculator">
-            <section class="is-flex is-flex-grow-1 first-row">
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">1</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">2</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">3</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">+</span>
-                </div>
-            </section>
-            <section class="is-flex is-flex-grow-1 second-row">
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">4</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">5</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">6</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">-</span>
-                </div>
-            </section>
-            <section class="is-flex is-flex-grow-1 third-row">
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">7</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">8</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">9</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">*</span>
-                </div>
-            </section>
-            <section class="is-flex is-flex-grow-1 fourth-row">
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">C</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">X</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">=</span>
-                </div>
-                <div class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable">
-                    <span class="">/</span>
-                </div>
-            </section>
-        </main>
-        <script src="./src/js/calculator.js" defer></script>
-        <script src="./src/js/app.js" defer></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <main class="is-flex is-flex-direction-column m-6 calculator">
+      <section class="is-flex is-flex-grow-1 first-row">
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">1</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">2</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">3</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">+</span>
+        </div>
+      </section>
+      <section class="is-flex is-flex-grow-1 second-row">
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">4</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">5</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">6</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">-</span>
+        </div>
+      </section>
+      <section class="is-flex is-flex-grow-1 third-row">
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">7</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">8</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">9</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">*</span>
+        </div>
+      </section>
+      <section class="is-flex is-flex-grow-1 fourth-row">
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">C</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">X</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">=</span>
+        </div>
+        <div
+          class="is-flex is-flex-grow-1 is-flex-direction-column is-align-items-center justify-content-center is-clickable"
+        >
+          <span class="noselect">/</span>
+        </div>
+      </section>
+    </main>
+    <script src="./src/js/calculator.js" defer></script>
+    <script src="./src/js/app.js" defer></script>
+  </body>
 </html>
