@@ -1,3 +1,4 @@
+const displayEl = document.querySelector(".display");
 const isClickableEls = document.querySelectorAll(".is-clickable");
 const calc = new Calculator();
 
@@ -14,32 +15,40 @@ const resetCalc = () => {
   isOperatorSelected = false;
 };
 
+const updateDisplay = () =>
+  (displayEl.value = `${calc.num1 || ""}${calc.operator || ""}${
+    calc.num2 || ""
+  }${isNum1Selected && isNum2Selected && isOperatorSelected ? "=" : ""}${
+    isNum1Selected && isNum2Selected && isOperatorSelected
+      ? calc.getAnswer()
+      : ""
+  }`);
+
 isClickableEls.forEach((el) => {
   el.addEventListener("click", function () {
-    const userInput = this.children[0].textContent;
-    if (!isNum1Selected && !isNaN(Number(userInput))) {
-      calc.num1 += userInput;
-      return calc.num1;
-    }
-    if (!isOperatorSelected && /[+\-*\/]/g.test(userInput)) {
-      if (calc.num1) {
-        isNum1Selected = true;
-        calc.operator = userInput;
-        isOperatorSelected = true;
-        return calc.operator;
+    if (!(isNum1Selected && isNum2Selected && isOperatorSelected)) {
+      const userInput = this.children[0].textContent;
+      if (!isNum1Selected && !isNaN(Number(userInput))) {
+        calc.num1 += userInput;
+        return updateDisplay();
       }
-    }
-    if (isNum1Selected && isOperatorSelected && !isNaN(Number(userInput))) {
-      calc.num2 += userInput;
-      return calc.num2;
-    }
-    if (isNum1Selected && isOperatorSelected && /[=]/g.test(userInput)) {
-      if (calc.num1 && calc.num2) {
-        isNum2Selected = true;
-        console.log(
-          `${calc.num1}${calc.operator}${calc.num2}=${calc.getAnswer()}`
-        );
-        resetCalc();
+      if (!isOperatorSelected && /[+\-*\/]/g.test(userInput)) {
+        if (calc.num1) {
+          isNum1Selected = true;
+          calc.operator = userInput;
+          isOperatorSelected = true;
+          return updateDisplay();
+        }
+      }
+      if (isNum1Selected && isOperatorSelected && !isNaN(Number(userInput))) {
+        calc.num2 += userInput;
+        return updateDisplay();
+      }
+      if (isNum1Selected && isOperatorSelected && /[=]/g.test(userInput)) {
+        if (calc.num1 && calc.num2) {
+          isNum2Selected = true;
+          return updateDisplay();
+        }
       }
     }
   });

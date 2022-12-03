@@ -69,6 +69,10 @@ main {
   height: 100%;
 }
 
+.display {
+  flex-basis: 25%;
+}
+
 @media screen and (max-height: 780px) {
   .calculator span {
     font-size: 6rem;
