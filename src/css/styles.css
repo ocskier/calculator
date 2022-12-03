@@ -40,6 +40,10 @@ main {
   background-color: var(--bg-color-3);
 }
 
+.calculator > section:first-child {
+  flex-basis: 3%;
+}
+
 .calculator > section:not(:last-child) {
   border-bottom: 1px solid rgba(251, 183, 183, 0.5);
 }
@@ -67,6 +71,10 @@ main {
   align-items: center;
   font-size: 7rem;
   height: 100%;
+}
+
+.display {
+  flex-basis: 25%;
 }
 
 @media screen and (max-height: 780px) {
