@@ -1,28 +1,34 @@
 class Calculator {
   constructor() {
-    this.num1 = undefined;
-    this.num2 = undefined;
-    this.operator = undefined;
+    this._num1 = undefined;
+    this._num2 = undefined;
+    this._operator = undefined;
   }
-  setNum1(num) {
-    this.num1 = num;
+  get num1() {
+    return this._num1;
   }
-  setNum2(num) {
-    this.num2 = num;
+  get num2() {
+    return this._num2;
+  }
+  set num1(num) {
+    this._num1 = num;
+  }
+  set num2(num) {
+    this._num2 = num;
   }
   setOperator(action) {
     this.operator = action;
   }
   getAnswer() {
-    switch (this.operator) {
+    switch (this._operator) {
       case "+":
-        return this.num1 + this.num2;
+        return this._num1 + this._num2;
       case "-":
-        return this.num1 - this.num2;
+        return this._num1 - this._num2;
       case "*":
-        return this.num1 * this.num2;
+        return this._num1 * this._num2;
       case "/":
-        return this.num1 / this.num2;
+        return this._num1 / this._num2;
       default:
         return undefined;
     }
