@@ -1,8 +1,8 @@
 class Calculator {
   constructor() {
-    this._num1 = undefined;
-    this._num2 = undefined;
-    this._operator = undefined;
+    this._num1 = "";
+    this._num2 = "";
+    this._operator = "";
   }
   get num1() {
     return this._num1;
@@ -25,15 +25,16 @@ class Calculator {
   getAnswer() {
     switch (this._operator) {
       case "+":
-        return this._num1 + this._num2;
+        return Number(this._num1) + Number(this._num2);
       case "-":
-        return this._num1 - this._num2;
+        return Number(this._num1) - Number(this._num2);
       case "*":
-        return this._num1 * this._num2;
+        return Number(this._num1) * Number(this._num2);
       case "/":
-        return this._num1 / this._num2;
+        return Number(this._num1) / Number(this._num2);
       default:
         return undefined;
     }
   }
 }
+
