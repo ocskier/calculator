@@ -1,5 +1,6 @@
 const displayEl = document.querySelector(".display");
 const isClickableEls = document.querySelectorAll(".is-clickable");
+const resetEl = document.querySelector(".reset");
 const calc = new Calculator();
 
 let isNum1Selected = false;
@@ -53,3 +54,8 @@ isClickableEls.forEach((el) => {
     }
   });
 });
+
+resetEl.onclick = () => {
+  resetCalc();
+  updateDisplay();
+};
